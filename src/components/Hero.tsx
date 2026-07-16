@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-banner.png"
+          src="/hero-banner-v2.png"
           alt="Premium Used Cars Showroom in Kuwait"
           fill
           className="object-cover object-center"
