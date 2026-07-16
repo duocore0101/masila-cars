@@ -54,7 +54,7 @@ export default function Categories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -72,9 +72,9 @@ export default function Categories() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-masila-black/90 via-masila-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
               
-              <div className="absolute bottom-0 left-0 p-8 w-full">
+              <div className="absolute bottom-0 left-0 p-4 sm:p-8 w-full">
                 <div className="flex items-end justify-between">
-                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-masila-gold transition-colors">
+                  <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white group-hover:text-masila-gold transition-colors">
                     {category.title}
                   </h3>
                   <div className="w-10 h-10 rounded-full bg-masila-gold/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300 backdrop-blur-sm">

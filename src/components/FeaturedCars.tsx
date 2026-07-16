@@ -63,7 +63,7 @@ export default function FeaturedCars() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
           {cars.map((car, index) => (
             <motion.div
               key={car.id}
@@ -74,49 +74,49 @@ export default function FeaturedCars() {
               className="group bg-masila-black rounded-2xl overflow-hidden border border-white/5 hover:border-masila-gold/50 transition-colors duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]"
             >
               {/* Image Container */}
-              <div className="relative h-64 overflow-hidden bg-gray-900">
+              <div className="relative h-40 sm:h-64 overflow-hidden bg-gray-900">
                 <Image
                   src={car.image}
                   alt={car.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
-                <div className="absolute top-4 left-4 bg-masila-black/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-masila-gold border border-masila-gold/30">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-masila-black/80 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold text-masila-gold border border-masila-gold/30">
                   Certified Pre-Owned
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold mb-2 group-hover:text-masila-gold transition-colors">{car.name}</h3>
-                <div className="flex items-end gap-3 mb-6">
-                  <span className="text-2xl font-bold text-white">{car.price}</span>
-                  <span className="text-sm text-gray-400 pb-1">or {car.emi}</span>
+              <div className="p-3 sm:p-6">
+                <h3 className="font-heading text-sm sm:text-xl font-bold mb-1 sm:mb-2 group-hover:text-masila-gold transition-colors line-clamp-1">{car.name}</h3>
+                <div className="flex flex-col sm:flex-row sm:items-end gap-1 sm:gap-3 mb-4 sm:mb-6">
+                  <span className="text-base sm:text-2xl font-bold text-white">{car.price}</span>
+                  <span className="text-[10px] sm:text-sm text-gray-400 sm:pb-1">or {car.emi}</span>
                 </div>
 
                 {/* Specs Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Calendar className="w-4 h-4 text-masila-gold" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-400">
+                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-masila-gold" />
                     <span>{car.year}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Gauge className="w-4 h-4 text-masila-gold" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-400">
+                    <Gauge className="w-3 h-3 sm:w-4 sm:h-4 text-masila-gold" />
                     <span>{car.mileage}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Fuel className="w-4 h-4 text-masila-gold" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-400 hidden sm:flex">
+                    <Fuel className="w-3 h-3 sm:w-4 sm:h-4 text-masila-gold" />
                     <span>{car.fuel}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Settings className="w-4 h-4 text-masila-gold" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-400 hidden sm:flex">
+                    <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-masila-gold" />
                     <span>{car.transmission}</span>
                   </div>
                 </div>
 
                 <Link 
                   href="#contact" 
-                  className="block w-full text-center py-3 rounded-lg border border-white/10 hover:bg-masila-gold hover:text-masila-black hover:border-masila-gold transition-all duration-300 font-medium"
+                  className="block w-full text-center py-2 sm:py-3 rounded-lg border border-white/10 hover:bg-masila-gold hover:text-masila-black hover:border-masila-gold transition-all duration-300 text-xs sm:text-base font-medium"
                 >
                   View Details
                 </Link>
